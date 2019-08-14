@@ -1,2 +1,14 @@
 [2019-08-14 18:30:56.297] [sharedprocess] [info] main {"machineId":"a3da2fa6afb3aa5c0909126178fb0540e50384b1b2566a1f5fc2ef44cce2063b"}
 [2019-08-14 18:31:36.307] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-08-14 18:39:16.536] [sharedprocess] [info] Installing extension: knisterpeter.vscode-github
+[2019-08-14 18:40:07.318] [sharedprocess] [info] Downloaded extension: knisterpeter.vscode-github /tmp/72703011-31d4-4636-af8e-e767fcd2102e
+[2019-08-14 18:40:08.928] [sharedprocess] [info] Extracted extension to /home/samappagency/.vscode/extensions/.knisterpeter.vscode-github-0.30.2: knisterpeter.vscode-github
+[2019-08-14 18:40:08.930] [sharedprocess] [info] Renamed to /home/samappagency/.vscode/extensions/knisterpeter.vscode-github-0.30.2
+[2019-08-14 18:40:08.932] [sharedprocess] [info] Installation completed. knisterpeter.vscode-github
+[2019-08-14 18:40:08.988] [sharedprocess] [info] Extensions installed successfully: knisterpeter.vscode-github
+[2019-08-14 21:19:00.040] [sharedprocess] [info] Installing extension: bernardxiong.env-vscode
+[2019-08-14 21:19:02.652] [sharedprocess] [info] Downloaded extension: bernardxiong.env-vscode /tmp/5750b02d-bad8-4655-9ebd-94678581b8ee
+[2019-08-14 21:19:02.711] [sharedprocess] [info] Extracted extension to /home/samappagency/.vscode/extensions/.bernardxiong.env-vscode-0.1.1: bernardxiong.env-vscode
+[2019-08-14 21:19:02.712] [sharedprocess] [info] Renamed to /home/samappagency/.vscode/extensions/bernardxiong.env-vscode-0.1.1
+[2019-08-14 21:19:02.713] [sharedprocess] [info] Installation completed. bernardxiong.env-vscode
+[2019-08-14 21:19:02.746] [sharedprocess] [info] Extensions installed successfully: bernardxiong.env-vscode

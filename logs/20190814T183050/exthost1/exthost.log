@@ -44,3 +44,64 @@
 [2019-08-14 18:31:35.031] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
 [2019-08-14 18:31:35.201] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
 [2019-08-14 18:31:35.201] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-08-14 18:40:09.191] [exthost] [info] ExtensionService#_doActivateExtension KnisterPeter.vscode-github {"startup":false,"activationEvent":"*"}
+[2019-08-14 18:40:09.191] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/knisterpeter.vscode-github-0.30.2/out/src/main
+[2019-08-14 21:15:09.806] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.vscode-mysql {"startup":false,"activationEvent":"onCommand:mysql.runQuery"}
+[2019-08-14 21:15:09.806] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/formulahendry.vscode-mysql-0.4.0/out/extension
+[2019-08-14 21:19:02.847] [exthost] [info] ExtensionService#_doActivateExtension BernardXiong.env-vscode {"startup":false,"activationEvent":"workspaceContains:rtconfig.py"}
+[2019-08-14 21:19:02.847] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/bernardxiong.env-vscode-0.1.1/out/extension
+[2019-08-14 22:01:07.505] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 22:01:07.505] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/php-language-features/dist/phpMain
+[2019-08-14 22:01:07.687] [exthost] [info] ExtensionService#_doActivateExtension bmewburn.vscode-intelephense-client {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 22:01:07.687] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension
+[2019-08-14 22:01:07.992] [exthost] [info] ExtensionService#_doActivateExtension junstyle.php-cs-fixer {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 22:01:07.992] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/junstyle.php-cs-fixer-0.1.120/extension
+[2019-08-14 22:01:08.578] [exthost] [info] ExtensionService#_doActivateExtension MehediDracula.php-namespace-resolver {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 22:01:08.578] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/mehedidracula.php-namespace-resolver-1.1.8/src/extension
+[2019-08-14 22:01:08.608] [exthost] [info] ExtensionService#_doActivateExtension neilbrayfield.php-docblocker {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 22:01:08.609] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/neilbrayfield.php-docblocker-2.0.1/out/src/extension
+[2019-08-14 22:01:08.688] [exthost] [info] ExtensionService#_doActivateExtension phproberto.vscode-php-getters-setters {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 22:01:08.688] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/phproberto.vscode-php-getters-setters-1.2.3/out/extension
+[2019-08-14 22:01:08.716] [exthost] [info] ExtensionService#_doActivateExtension valeryanm.vscode-phpsab {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 22:01:08.716] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/extension
+[2019-08-14 22:01:08.809] [exthost] [error] [TheNouillet.symfony-vscode] provider FAILED
+[2019-08-14 22:01:08.830] [exthost] [error] Error: Illegal argument: character must be non-negative
+    at Object.t.illegalArgument (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:13:195)
+    at new g (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:346:390)
+    at new g (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:345:619)
+    at translate (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:347:697)
+    at Function.getWordRange (/home/samappagency/.vscode/extensions/thenouillet.symfony-vscode-1.0.2/out/mvc/editing/EditingUtils.js:8:64)
+    at ServiceDocumentationCodeActionProvider.provideCodeActions (/home/samappagency/.vscode/extensions/thenouillet.symfony-vscode-1.0.2/out/mvc/editing/codeaction/ServiceDocumentationCodeActionProvider.js:18:69)
+    at define.provideCodeActions.o.asPromise (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:556:905)
+    at t.asPromise.Promise (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:55:720)
+    at new Promise (<anonymous>)
+    at Object.t.asPromise (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:55:692)
+    at S.provideCodeActions (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:556:876)
+    at define.$provideCodeActions._withAdapter.e (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:573:417)
+    at W._withAdapter (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:569:219)
+    at W.$provideCodeActions (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:573:395)
+    at d._doInvokeHandler (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:668:1006)
+    at d._invokeHandler (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:668:698)
+    at d._receiveRequest (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:667:293)
+    at d._receiveOneMessage (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:666:141)
+    at define.constructor._protocol.onMessage.e (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:664:400)
+    at u.fire (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:50:207)
+    at a (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:180:27)
+    at e (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:180:73)
+    at u.fire (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:50:207)
+    at n.constructor.e.onMessage.e (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:775:104)
+    at u.fire (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:50:207)
+    at a (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:180:27)
+    at e (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:180:73)
+    at u.fire (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:50:207)
+    at y._receiveMessage (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:188:921)
+    at define.constructor._socketDisposables.push._socketReader.onMessage.e (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:186:204)
+    at u.fire (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:50:207)
+    at f.acceptChunk (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:182:778)
+    at define.constructor._register._socket.onData.e (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:182:130)
+    at Socket.t (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:190:419)
+    at Socket.emit (events.js:182:13)
+    at addChunk (_stream_readable.js:283:12)
+    at readableAddChunk (_stream_readable.js:264:11)
+    at Socket.Readable.push (_stream_readable.js:219:10)
+    at Pipe.onStreamRead [as onread] (internal/stream_base_commons.js:94:17)
