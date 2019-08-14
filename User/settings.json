@@ -1,0 +1,12 @@
+{
+    "sync.gist": "47bc08e46de8b6314964fabe4d8e53ec",
+    "sync.forceUpload": true,
+    "workbench.iconTheme": "vscode-icons",
+    "editor-quickSuggestions": {
+        "comments": true
+    },
+    "emmet.includeLanguages": {
+        "twig": "html",
+        "files.associations": {"*.twig": "html"}
+    },
+}

@@ -1,0 +1,42 @@
+[2019-08-13 13:22:14.587] [renderer1] [warning] UNRESPONSIVE extension host, 'Zignd.html-css-class-completion' took 92% of 3439.14ms, saved PROFILE here: '/tmp/exthost-d7d354.cpuprofile' [{"id":"gc","total":6958,"percentage":0},{"id":"program","total":25490,"percentage":1},{"id":"self","total":257011,"percentage":7},{"id":"Zignd.html-css-class-completion","total":3149265,"percentage":92}]
+[2019-08-13 13:22:49.085] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2019-08-13 13:22:49.113] [renderer1] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2019-08-13 13:23:34.108] [renderer1] [error] The argument 'file' cannot be empty. Received '': TypeError [ERR_INVALID_ARG_VALUE]: The argument 'file' cannot be empty. Received ''
+    at normalizeSpawnArguments (child_process.js:407:11)
+    at Object.spawn (child_process.js:537:38)
+    at Sniffer.<anonymous> (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:175:45)
+    at Generator.next (<anonymous>)
+    at fulfilled (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:9:58)
+[2019-08-13 13:29:04.986] [renderer1] [error] The argument 'file' cannot be empty. Received '': TypeError [ERR_INVALID_ARG_VALUE]: The argument 'file' cannot be empty. Received ''
+    at normalizeSpawnArguments (child_process.js:407:11)
+    at Object.spawn (child_process.js:537:38)
+    at Sniffer.<anonymous> (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:175:45)
+    at Generator.next (<anonymous>)
+    at fulfilled (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:9:58)
+[2019-08-13 13:29:48.768] [renderer1] [error] Cannot read property 'name' of null: TypeError: Cannot read property 'name' of null
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176093)
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176238)
+    at Array.map (<anonymous>)
+    at Object.asDocumentSymbols (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:180238)
+    at module.exports.registerLanguageProvider.t.sendRequest.then.e (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:39603)
+[2019-08-13 13:32:16.307] [renderer1] [error] The argument 'file' cannot be empty. Received '': TypeError [ERR_INVALID_ARG_VALUE]: The argument 'file' cannot be empty. Received ''
+    at normalizeSpawnArguments (child_process.js:407:11)
+    at Object.spawn (child_process.js:537:38)
+    at Sniffer.<anonymous> (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:175:45)
+    at Generator.next (<anonymous>)
+    at fulfilled (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:9:58)
+[2019-08-13 13:32:42.552] [renderer1] [error] $(issue-opened)  Nothing to sort.: Error: $(issue-opened)  Nothing to sort.
+    at Resolver.sortImports (/home/samappagency/.vscode/extensions/mehedidracula.php-namespace-resolver-1.1.8/src/Resolver.js:440:19)
+    at Resolver.insert (/home/samappagency/.vscode/extensions/mehedidracula.php-namespace-resolver-1.1.8/src/Resolver.js:250:18)
+[2019-08-13 13:34:08.809] [renderer1] [error] The argument 'file' cannot be empty. Received '': TypeError [ERR_INVALID_ARG_VALUE]: The argument 'file' cannot be empty. Received ''
+    at normalizeSpawnArguments (child_process.js:407:11)
+    at Object.spawn (child_process.js:537:38)
+    at Sniffer.<anonymous> (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:175:45)
+    at Generator.next (<anonymous>)
+    at fulfilled (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:9:58)
+[2019-08-13 13:37:57.248] [renderer1] [error] The argument 'file' cannot be empty. Received '': TypeError [ERR_INVALID_ARG_VALUE]: The argument 'file' cannot be empty. Received ''
+    at normalizeSpawnArguments (child_process.js:407:11)
+    at Object.spawn (child_process.js:537:38)
+    at Sniffer.<anonymous> (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:175:45)
+    at Generator.next (<anonymous>)
+    at fulfilled (/home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/sniffer.js:9:58)

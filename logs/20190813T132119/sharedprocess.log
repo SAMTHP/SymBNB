@@ -1,0 +1,8 @@
+[2019-08-13 13:21:57.235] [sharedprocess] [info] main {"machineId":"a3da2fa6afb3aa5c0909126178fb0540e50384b1b2566a1f5fc2ef44cce2063b"}
+[2019-08-13 13:22:37.219] [sharedprocess] [info] Starting to clean up unused language packs.
+[2019-08-13 14:30:27.833] [sharedprocess] [info] Installing extension: bajdzis.vscode-twig-pack
+[2019-08-13 14:30:28.472] [sharedprocess] [info] Downloaded extension: bajdzis.vscode-twig-pack /tmp/99c92b93-dafb-4733-ade8-3a971b686021
+[2019-08-13 14:30:28.582] [sharedprocess] [info] Extracted extension to /home/samappagency/.vscode/extensions/.bajdzis.vscode-twig-pack-1.0.0: bajdzis.vscode-twig-pack
+[2019-08-13 14:30:28.583] [sharedprocess] [info] Renamed to /home/samappagency/.vscode/extensions/bajdzis.vscode-twig-pack-1.0.0
+[2019-08-13 14:30:28.584] [sharedprocess] [info] Installation completed. bajdzis.vscode-twig-pack
+[2019-08-13 14:30:28.615] [sharedprocess] [info] Extensions installed successfully: bajdzis.vscode-twig-pack

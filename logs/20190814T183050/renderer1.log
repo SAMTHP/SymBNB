@@ -1,0 +1,4 @@
+[2019-08-14 18:31:08.933] [renderer1] [error] Error: [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2019-08-14 18:31:08.970] [renderer1] [error] [File Watcher (chokidar)] Inotify limit reached (ENOSPC)
+[2019-08-14 18:31:38.866] [renderer1] [error] Cannot read property 'stack' of undefined: TypeError: Cannot read property 'stack' of undefined
+    at t.onMessage.process.on.t.catch.t (/snap/code/12/usr/share/code/resources/app/out/vs/workbench/services/extensions/node/extensionHostProcess.js:775:578)

@@ -1,0 +1,87 @@
+[2019-08-14 13:21:20.075] [exthost] [info] extension host started
+[2019-08-14 13:21:20.083] [exthost] [info] ExtensionService#_doActivateExtension ecmel.vscode-html-css {"startup":false,"activationEvent":"onLanguage:twig"}
+[2019-08-14 13:21:20.083] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/ecmel.vscode-html-css-0.2.0/out/src/extension
+[2019-08-14 13:21:27.175] [exthost] [info] ExtensionService#_doActivateExtension mblode.twig-language-2 {"startup":false,"activationEvent":"onLanguage:twig"}
+[2019-08-14 13:21:27.175] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/mblode.twig-language-2-0.8.9/extension/index
+[2019-08-14 13:21:27.356] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:27.356] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-08-14 13:21:27.375] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:27.375] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/emmet/dist/extension
+[2019-08-14 13:21:27.503] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:27.503] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/git/dist/main
+[2019-08-14 13:21:27.724] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:27.724] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/merge-conflict/dist/extension
+[2019-08-14 13:21:27.734] [exthost] [info] ExtensionService#_doActivateExtension bajdzis.vscode-database {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:27.734] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/bajdzis.vscode-database-2.2.0/out/extension.js
+[2019-08-14 13:21:27.954] [exthost] [info] ExtensionService#_doActivateExtension bajdzis.vscode-twig-pack {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:27.954] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/bajdzis.vscode-twig-pack-1.0.0/extension
+[2019-08-14 13:21:28.046] [exthost] [info] ExtensionService#_doActivateExtension cweijan.vscode-mysql-manager {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:28.046] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/cweijan.vscode-mysql-manager-1.5.2/out/extension
+[2019-08-14 13:21:28.085] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:28.085] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/hookyqr.beautify-1.5.0/extension
+[2019-08-14 13:21:28.326] [exthost] [info] ExtensionService#_doActivateExtension michelemelluso.code-beautifier {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:28.326] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/michelemelluso.code-beautifier-2.3.3/out/src/extension
+[2019-08-14 13:21:28.461] [exthost] [info] ExtensionService#_doActivateExtension pranaygp.vscode-css-peek {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:28.461] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/pranaygp.vscode-css-peek-3.0.2/out/client/src/extension
+[2019-08-14 13:21:28.678] [exthost] [info] ExtensionService#_doActivateExtension Shan.code-settings-sync {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:28.678] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/shan.code-settings-sync-3.4.1/out/extension.js
+[2019-08-14 13:21:29.159] [exthost] [info] ExtensionService#_doActivateExtension Sophisticode.php-formatter {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:29.159] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/sophisticode.php-formatter-0.2.4/out/extension
+[2019-08-14 13:21:29.259] [exthost] [info] ExtensionService#_doActivateExtension vscode-icons-team.vscode-icons {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:29.259] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/vscode-icons-team.vscode-icons-9.2.0/dist/src/vscode-icons.bundle.js
+[2019-08-14 13:21:29.504] [exthost] [info] ExtensionService#_doActivateExtension Zignd.html-css-class-completion {"startup":true,"activationEvent":"*"}
+[2019-08-14 13:21:29.504] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/zignd.html-css-class-completion-1.19.0/out/src/extension
+[2019-08-14 13:21:32.716] [exthost] [info] ExtensionService#_doActivateExtension n4zim.vscode-symfony {"startup":true,"activationEvent":"workspaceContains:**/composer.json"}
+[2019-08-14 13:21:32.716] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/n4zim.vscode-symfony-0.0.4/out/extension
+[2019-08-14 13:21:32.825] [exthost] [info] ExtensionService#_doActivateExtension felixfbecker.php-intellisense {"startup":true,"activationEvent":"workspaceContains:**/*.php"}
+[2019-08-14 13:21:32.825] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/felixfbecker.php-intellisense-2.3.10/out/extension
+[2019-08-14 13:21:33.067] [exthost] [info] ExtensionService#_doActivateExtension TheNouillet.symfony-vscode {"startup":true,"activationEvent":"workspaceContains:**/composer.json"}
+[2019-08-14 13:21:33.067] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/thenouillet.symfony-vscode-1.0.2/out/extension
+[2019-08-14 13:21:33.433] [exthost] [info] eager extensions activated
+[2019-08-14 13:38:17.136] [exthost] [info] ExtensionService#_doActivateExtension vscode.php-language-features {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 13:38:17.199] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/php-language-features/dist/phpMain
+[2019-08-14 13:38:17.417] [exthost] [info] ExtensionService#_doActivateExtension bmewburn.vscode-intelephense-client {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 13:38:17.417] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension
+[2019-08-14 13:38:17.612] [exthost] [info] ExtensionService#_doActivateExtension junstyle.php-cs-fixer {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 13:38:17.612] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/junstyle.php-cs-fixer-0.1.120/extension
+[2019-08-14 13:38:18.909] [exthost] [info] ExtensionService#_doActivateExtension MehediDracula.php-namespace-resolver {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 13:38:18.909] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/mehedidracula.php-namespace-resolver-1.1.8/src/extension
+[2019-08-14 13:38:18.943] [exthost] [info] ExtensionService#_doActivateExtension neilbrayfield.php-docblocker {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 13:38:18.943] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/neilbrayfield.php-docblocker-2.0.1/out/src/extension
+[2019-08-14 13:38:19.128] [exthost] [info] ExtensionService#_doActivateExtension phproberto.vscode-php-getters-setters {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 13:38:19.128] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/phproberto.vscode-php-getters-setters-1.2.3/out/extension
+[2019-08-14 13:38:19.212] [exthost] [info] ExtensionService#_doActivateExtension valeryanm.vscode-phpsab {"startup":false,"activationEvent":"onLanguage:php"}
+[2019-08-14 13:38:19.212] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/valeryanm.vscode-phpsab-0.0.3/out/extension
+[2019-08-14 13:39:54.150] [exthost] [error] [bmewburn.vscode-intelephense-client] provider FAILED
+[2019-08-14 13:39:54.208] [exthost] [error] TypeError: Cannot read property 'name' of null
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176093)
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176238)
+    at Array.map (<anonymous>)
+    at Object.asDocumentSymbols (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:180238)
+    at module.exports.registerLanguageProvider.t.sendRequest.then.e (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:39603)
+[2019-08-14 13:50:23.808] [exthost] [error] [bmewburn.vscode-intelephense-client] provider FAILED
+[2019-08-14 13:50:23.809] [exthost] [error] TypeError: Cannot read property 'name' of null
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176093)
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176238)
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176238)
+    at Array.map (<anonymous>)
+    at Object.asDocumentSymbols (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:180238)
+    at module.exports.registerLanguageProvider.t.sendRequest.then.e (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:39603)
+[2019-08-14 13:50:25.242] [exthost] [error] [bmewburn.vscode-intelephense-client] provider FAILED
+[2019-08-14 13:50:25.242] [exthost] [error] TypeError: Cannot read property 'name' of null
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176093)
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176238)
+    at F (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:176238)
+    at Array.map (<anonymous>)
+    at Object.asDocumentSymbols (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:180238)
+    at module.exports.registerLanguageProvider.t.sendRequest.then.e (/home/samappagency/.vscode/extensions/bmewburn.vscode-intelephense-client-1.1.6/lib/extension.js:1:39603)
+[2019-08-14 14:27:45.383] [exthost] [info] ExtensionService#_doActivateExtension vscode.configuration-editing {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-08-14 14:27:45.389] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/configuration-editing/dist/extension
+[2019-08-14 14:27:45.729] [exthost] [info] ExtensionService#_doActivateExtension vscode.json-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-08-14 14:27:45.729] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/json-language-features/client/dist/jsonMain
+[2019-08-14 14:27:47.689] [exthost] [info] ExtensionService#_doActivateExtension vscode.typescript-language-features {"startup":false,"activationEvent":"onLanguage:jsonc"}
+[2019-08-14 14:27:47.689] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/typescript-language-features/dist/extension
+[2019-08-14 15:09:15.530] [exthost] [info] ExtensionService#_doActivateExtension vscode.css-language-features {"startup":false,"activationEvent":"onLanguage:css"}
+[2019-08-14 15:09:15.531] [exthost] [info] ExtensionService#loadCommonJSModule /snap/code/12/usr/share/code/resources/app/extensions/css-language-features/client/dist/cssMain
+[2019-08-14 15:17:15.042] [exthost] [info] ExtensionService#_doActivateExtension mgmcdermott.vscode-language-babel {"startup":false,"activationEvent":"onLanguage:javascript"}
+[2019-08-14 15:17:15.043] [exthost] [info] ExtensionService#loadCommonJSModule /home/samappagency/.vscode/extensions/mgmcdermott.vscode-language-babel-0.0.23/dist/extension
