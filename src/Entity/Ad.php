@@ -2,10 +2,14 @@
 
 namespace App\Entity;
 
+use Cocur\Slugify\Slugify;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdRepository")
+ * @ORM\HasLifecycleCallbacks
  */
 class Ad
 {
@@ -50,6 +54,34 @@ class Ad
      * @ORM\Column(type="integer")
      */
     private $rooms;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Image", mappedBy="ad", orphanRemoval=true)
+     */
+    private $images;
+
+    public function __construct()
+    {
+        $this->images = new ArrayCollection();
+    }
+
+    /**
+     * Allow to initialize the slug
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     * 
+     * @return void
+     */
+    public function initializeSlug(){
+        if(empty($this->slug)){
+            // Instanciation of Slugify class
+            $slugify = new Slugify();
+
+            // Affectation of the slug propertie with the slugify methods
+            $this->slug = $slugify->slugify($this->title);
+        }
+    }
 
     public function getId(): ?int
     {
@@ -136,6 +168,37 @@ class Ad
     public function setRooms(int $rooms): self
     {
         $this->rooms = $rooms;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Image[]
+     */
+    public function getImages(): Collection
+    {
+        return $this->images;
+    }
+
+    public function addImage(Image $image): self
+    {
+        if (!$this->images->contains($image)) {
+            $this->images[] = $image;
+            $image->setAd($this);
+        }
+
+        return $this;
+    }
+
+    public function removeImage(Image $image): self
+    {
+        if ($this->images->contains($image)) {
+            $this->images->removeElement($image);
+            // set the owning side to null (unless already changed)
+            if ($image->getAd() === $this) {
+                $image->setAd(null);
+            }
+        }
 
         return $this;
     }

@@ -109,3 +109,32 @@ Open repository: /opt/lampp/htdocs/symbnb2
 > git remote --verbose
 > git config --get commit.template
 > git show :src/Entity/Ad.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :src/Entity/Ad.php
+> git commit --quiet --allow-empty-message --file -
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git config --get commit.template
+> git show :src/Entity/Ad.php
+> git status -z -u
+> git symbolic-ref --short HEAD
+> git show :src/Entity/Ad.php
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :logs/20190814T183050/exthost1/output_logging_20190814T183117/1-Git.log
+> git check-ignore -v -z --stdin
+> git show :src/Entity/Ad.php

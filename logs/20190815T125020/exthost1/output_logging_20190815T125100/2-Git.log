@@ -1,0 +1,97 @@
+Looking for git in: git
+Using git 2.17.1 from git
+> git rev-parse --show-toplevel
+> git rev-parse --git-dir
+> git config --get commit.template
+Open repository: /opt/lampp/htdocs/symbnb2
+> git status -z -u
+> git check-ignore -v -z --stdin
+> git symbolic-ref --short HEAD
+> git rev-parse master
+> git rev-parse --symbolic-full-name master@{u}
+> git rev-list --left-right master...refs/remotes/origin/master
+> git for-each-ref --format %(refname) %(objectname) --sort -committerdate
+> git remote --verbose
+> git show :templates/home.html.twig
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :public/js/bootstrap.min.js
+> git show :templates/home.html.twig
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :templates/home.html.twig
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :.env
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/Entity/Ad.php
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/Entity/Ad.php
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/Entity/Ad.php
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/Entity/Ad.php
+> git show :src/Controller/HomeController.php
+> git check-ignore -v -z --stdin
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git check-ignore -v -z --stdin
+> git check-ignore -v -z --stdin
+> git show :templates/ad/index.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :templates/home.html.twig
+> git show :templates/ad/index.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git show :templates/home.html.twig
+> git show :templates/ad/index.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :templates/ad/index.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :templates/ad/index.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git show :templates/ad/index.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git show :templates/ad/index.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git show :templates/ad/show.html.twig
+> git check-ignore -v -z --stdin
+> git ls-files --stage -- templates/ad/
+> git show :src/DataFixtures/AppFixtures.php
+> git ls-files --stage -- src/DataFixtures/
+> git show :templates/ad/show.html.twig
+> git ls-files --stage -- templates/ad/
+> git show :src/Controller/AdController.php
+> git ls-files --stage -- src/Controller/
+> git show :templates/ad/show.html.twig
+> git ls-files --stage -- templates/ad/

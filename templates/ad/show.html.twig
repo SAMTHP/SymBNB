@@ -1,0 +1,68 @@
+{% extends "base.html.twig" %}
+
+{% block title %}{{ ad.title }} {% endblock %}
+
+{% block body %}
+<div class="ad-titre" style="background-image: url({{ ad.coverImage }});">
+    <div class="container">
+        <h1>{{ ad.title }}</h1>
+        <p>{{ ad.introduction }}</p>
+        <p class="h2">
+            <strong>{{ ad.rooms }} chambres</strong> pour <strong>{{ ad.price }}&euro;</strong> par nuit
+        </p>
+        <a href="#" class="btn btn-primary">Réserver !</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mb-3">
+
+            {{ ad.content|raw }}
+
+            <div id="carouselExampleCaptions" class="carousel slide shadow" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for image in ad.images %}
+                        <li data-target="#carouselExampleCaptions" data-slide-to="{{ loop.index0 }}" {% if loop.first %}class="active"{% endif %}></li>
+                    {% endfor %} 
+                </ol>
+                <div class="carousel-inner">
+                    {% for image in ad.images %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                            <img src=" {{ image.url }} " class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>{{ ad.title }}</h5>
+                                <p>{{ image.caption }}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Précédente</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Suivante</span>
+                </a>
+            </div>
+
+        </div>
+
+        <div class="col">
+            <div class="row">
+                <div class="col-4">
+                    <img src="https://i.pravatar.cc/64" alt="Avatar de personne" class="shadow">
+                </div>
+                <div class="col">
+                    <h3>Mr Personne</h3>
+                    <span class="badge badge-primary">3 annonces</span>
+                </div>
+            </div>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita possimus pariatur fugit fugiat id laborum voluptatum dolorem eius nesciunt nam?</p>
+            <p>Fuga molestiae, dignissimos, cupiditate sapiente provident distinctio quas voluptates rem, quod exercitationem officia molestias natus quia maxime dolorem excepturi dolor?</p>
+            <p>Harum, ipsam. Quis, amet aspernatur assumenda alias similique, in sed hic sunt fugit cumque libero quasi quam quaerat sint voluptatum!</p>
+        </div>
+    </div>
+</div>
+{% endblock %}
