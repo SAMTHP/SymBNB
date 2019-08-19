@@ -3,13 +3,20 @@
 namespace App\Entity;
 
 use Cocur\Slugify\Slugify;
-use Doctrine\Common\Collections\ArrayCollection;
-use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\Collection;
+use Doctrine\Common\Collections\ArrayCollection;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\AdRepository")
  * @ORM\HasLifecycleCallbacks
+ * @UniqueEntity(
+ *  fields={"title"},
+ *  message="Une autre annonce possède déjà ce titre, merci de le modifier !"
+ * )
  */
 class Ad
 {
@@ -22,6 +29,12 @@ class Ad
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(
+     *  min = 10,
+     *  max = 255,
+     *  minMessage = "Le titre doit être supérieur à 10 caractères",
+     *  maxMessage = "Le titre ne doit pas dépasser 255 caractères"
+     * )
      */
     private $title;
 
@@ -37,16 +50,25 @@ class Ad
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(
+     *  min = 20,
+     *  minMessage = "L'introduction doit être supérieur à 20 caractères"
+     * )
      */
     private $introduction;
 
     /**
      * @ORM\Column(type="text")
+     * @Assert\Length(
+     *  min = 100,
+     *  minMessage = "La descrition doit être supérieur à 100 caractères"
+     * )
      */
     private $content;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Url()
      */
     private $coverImage;
 
@@ -57,6 +79,7 @@ class Ad
 
     /**
      * @ORM\OneToMany(targetEntity="App\Entity\Image", mappedBy="ad", orphanRemoval=true)
+     * @Assert\Valid()
      */
     private $images;
 

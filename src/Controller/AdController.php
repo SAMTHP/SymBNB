@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Entity\Ad;
+use App\Entity\Image;
 use App\Form\AdType;
 use App\Repository\AdRepository;
 use Doctrine\Common\Persistence\ObjectManager;
@@ -46,6 +47,13 @@ class AdController extends AbstractController
         
         // Test if form have been submitted
         if($form->isSubmitted() && $form->isValid()){
+            // We persist all images which have been added
+            foreach($ad->getImages() as $image){
+                // We link the image with current ad
+                $image->setAd($ad);
+                // We persist this image
+                $manager->persist($image);
+            }
             // We persit the new ad entity
             $manager->persist($ad);
             dump($ad);
@@ -71,6 +79,54 @@ class AdController extends AbstractController
             ['form' => $form->createView()]
         );
 
+    }
+    
+    /**
+     * Allow to implement the edit form of an ad
+     * 
+     * @Route("/ads/{slug}/edit", name="ads_edit")
+     *
+     * @return Response
+     */
+    public function edit(Request $request, Ad $ad, ObjectManager $manager){
+        // Construction a form with the formBuilder
+        $form = $this->createForm(AdType::class, $ad);
+
+        // Handle http request in to form
+        $form->handleRequest($request);
+
+        // Test if form have been submitted
+        if($form->isSubmitted() && $form->isValid()){
+            // We persist all images which have been added
+            foreach($ad->getImages() as $image){
+                // We link the image with current ad
+                $image->setAd($ad);
+                // We persist this image
+                $manager->persist($image);
+            }
+            // We persit the new ad entity
+            $manager->persist($ad);
+            dump($ad);
+
+            // We send the sql request in to database in order to save this new ad
+            $manager->flush();
+
+            // Sending a flash success which show that the ad have been saving in to database
+            $this->addFlash(
+                'success',
+                "L'annonce <strong>{$ad->getTitle()}</strong> a été modifiée avec succès !"
+            );
+            
+            // Redirect to route which show this new ad
+            return $this->redirectToRoute('ads_show', [
+                'slug' => $ad->getSlug()
+            ]);
+        }
+
+        return $this->render("ad/edit.html.twig", [
+            'form' => $form->createView(),
+            'ad' => $ad
+        ]);
     }
 
     /**
