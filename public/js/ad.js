@@ -21,7 +21,6 @@ $('#add-image').click(function(){
 
 // Function which will to administrate the deletes buttons
 function handleDeleteButtons(){
-
     // Find all buttons which have data-action='delete' property
     $('button[data-action="delete"]').on('click',function(){
         // We get the corresponding target
@@ -31,6 +30,17 @@ function handleDeleteButtons(){
         $(target).remove();
     });
 }
+
+// Function which update the widgets-counter
+function updateCounter(){
+    // We calculate how many images are showing
+    const count = +$('#ad_images div.form-group').length;
+    // We increment the widgets-counter by the good value
+    $('#widgets-counter').val(count);
+}
+
+// Call updateCounter()
+updateCounter();
 
 // Call handleDeleteButtons()
 handleDeleteButtons();
