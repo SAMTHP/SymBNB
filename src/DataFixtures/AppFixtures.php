@@ -8,9 +8,17 @@ use App\Entity\Image;
 use App\Entity\User;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
+use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class AppFixtures extends Fixture
 {
+    private $encoder;
+
+    public function __construct(UserPasswordEncoderInterface $encoder)
+    {
+        $this->encoder = $encoder;
+    }
+
     public function load(ObjectManager $manager)
     {  
         //Initialization of Faker :
@@ -18,13 +26,29 @@ class AppFixtures extends Fixture
 
         // we generate users 
         $users = [];
+        $genres = ['male','female'];
 
         for($e = 1; $e <= 10; $e++){
             // Firstly we doing an instanciation of Ad class
             $user = new User();
 
-            // Set of users properties with faker methods            
-            $firstname = $faker->firstName;
+            // Random on gender array
+            $genre = $faker->randomElement($genres);
+
+            // Random in order to have different pictureId
+            $pictureId = $faker->numberBetween(1,99) . '.jpg';
+
+            // Url from randomuser API
+            $picture = "https//randomuser.me/api/portraits/";
+
+            // Set of user avatar
+            $picture .= ($genre == 'male' ? 'men/' : 'women/').$pictureId;
+
+            // Hashing of user password
+            $hash = $this->encoder->encodePassword($user,'password');
+
+            // Set of user properties with faker methods            
+            $firstname = $faker->firstName($genre);
             $lastname = $faker->lastName;
             $email = $faker->email;
             $introduction = $faker->sentence();
@@ -33,8 +57,9 @@ class AppFixtures extends Fixture
             // Secondly Configuration of properties of the Ad class
             $user->setFistName($firstname)
                  ->setLastName($lastname)
+                 ->setPicture($picture)
                  ->setEmail($email)
-                 ->setHash('password')
+                 ->setHash($hash)
                  ->setIntroduction($introduction)
                  ->setDescription($description);
 
@@ -83,8 +108,6 @@ class AppFixtures extends Fixture
             // To finish, we using the doctrine manager, in order to persist in to database
             $manager->persist($ad);
         }
-        
-
         $manager->flush();
     }
 }
