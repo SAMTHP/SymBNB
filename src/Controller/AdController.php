@@ -45,7 +45,7 @@ class AdController extends AbstractController
         // Handle http request in to form
         $form->handleRequest($request);
         
-        // Test if form have been submitted
+        // Test if form have been submitted and if it's valid
         if($form->isSubmitted() && $form->isValid()){
             // We persist all images which have been added
             foreach($ad->getImages() as $image){
