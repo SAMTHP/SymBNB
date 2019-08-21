@@ -44,6 +44,11 @@ class RegistrationType extends ApplicationType
                 $this->getConfigurations("Mot de passe","Entrez votre mot de passe")
             )
             ->add(
+                'passwordConfirm',
+                PasswordType::class,
+                $this->getConfigurations("Confirmation du mot de passe","Confirmez le mot de passe")
+            )
+            ->add(
                 'introduction', 
                 TextType::class,
                 $this->getConfigurations("Introduction","Présentez vous en quelques mots")

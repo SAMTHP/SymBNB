@@ -2,12 +2,16 @@
 
 namespace App\Controller;
 
+use App\Entity\PasswordUpdate;
 use App\Entity\User;
+use App\Form\AccountType;
+use App\Form\PasswordUpdateType;
 use App\Form\RegistrationType;
 use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\FormError;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
@@ -92,6 +96,91 @@ class AccountController extends AbstractController
         }
         // Render in to the view 
         return $this->render('account/registration.html.twig',[
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * Allow to edit an user
+     *
+     * @Route("/account/profile", name="account_profile")
+     * 
+     * @return Response
+     */
+    public function profile(ObjectManager $manager, Request $request)
+    {   
+        // We get the current user
+        $user = $this->getUser();
+
+        // Construction a form with the formBuilder
+        $form = $this->createForm(AccountType::class, $user);
+
+        //Handle http request in to form
+        $form->handleRequest($request);
+
+        // Test if form have been submitted and if it's valid
+        if($form->isSubmitted() && $form->isValid()){
+            // We persit the edition of user entity
+            $manager->persist($user);
+
+            // We send the sql request in to database in order to save the edition of current user
+            $manager->flush();
+
+            // Sending a flash success which show that the ad have been saving in to database
+            $this->addFlash(
+                'success',
+                "Votre compte a été modifié avec succès !"
+            );
+
+            //return $this->redirectToRoute('ads_index');
+        }
+
+        return $this->render('account/profile.html.twig',[
+            'form' => $form->createView()
+        ]);
+    }
+
+    /**
+     * Allow to update the password
+     *
+     * @Route("/account/password-update", name="account_password")
+     * 
+     * @return Response
+     */
+    public function updatePassword(ObjectManager $manager, Request $request, UserPasswordEncoderInterface $encoder){
+
+        $user = $this->getUser();
+
+        $passwordUpdate = new PasswordUpdate();
+
+        $form = $this->createForm(PasswordUpdateType::class, $passwordUpdate);
+
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()){
+            // We verify if old password equal to user password
+            if(!password_verify($passwordUpdate->getOldPassword(), $user->getHash())){
+                $form->get('oldPassword')->addError(new FormError("Le mot de passe que vous avez tapé n'est pas votre mot de passe actuel"));
+            }else {
+                $newPassword = $passwordUpdate->getNewPassword();
+                $hash = $encoder->encodePassword($user,$newPassword);
+
+                $user->setHash($hash);
+
+                $manager->persist($user);
+                $manager->flush();
+
+                // Sending a flash success which show that the ad have been saving in to database
+                $this->addFlash(
+                    'success',
+                    "Votre mot de passe a été modifié avec succès !"
+                );
+
+                return $this->redirectToRoute('homepage');
+            }
+        }
+
+        return $this->render('account/password.html.twig',[
             'form' => $form->createView()
         ]);
     }
