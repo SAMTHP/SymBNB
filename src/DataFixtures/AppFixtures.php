@@ -39,7 +39,7 @@ class AppFixtures extends Fixture
             $pictureId = $faker->numberBetween(1,99) . '.jpg';
 
             // Url from randomuser API
-            $picture = "https//randomuser.me/api/portraits/";
+            $picture = "https://randomuser.me/api/portraits/";
 
             // Set of user avatar
             $picture .= ($genre == 'male' ? 'men/' : 'women/').$pictureId;

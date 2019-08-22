@@ -50,18 +50,21 @@
         </div>
 
         <div class="col">
-            <div class="row">
-                <div class="col-4">
-                    <img src="https://i.pravatar.cc/64" alt="Avatar de personne" class="shadow">
+            {% set a = ad.author %}
+            <div class="row mb-2">
+                <div class="col-3">
+                    <a href="{{ path("user_show",{'slug': a.slug}) }}">
+                        <img src="{{a.picture}}" alt="Avatar de {{ a.getFullName }}" class="avatar avatar-medium">
+                    </a>
                 </div>
                 <div class="col">
-                    <h3>Mr Personne</h3>
-                    <span class="badge badge-primary">3 annonces</span>
+                    <a href="{{ path("user_show",{'slug': a.slug}) }}">
+                        <h3>{{ a.getFullName }}</h3>
+                    </a>
+                    <span class="badge badge-primary font-weight-bold">{{ a.ads|length }} annonces</span>
                 </div>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita possimus pariatur fugit fugiat id laborum voluptatum dolorem eius nesciunt nam?</p>
-            <p>Fuga molestiae, dignissimos, cupiditate sapiente provident distinctio quas voluptates rem, quod exercitationem officia molestias natus quia maxime dolorem excepturi dolor?</p>
-            <p>Harum, ipsam. Quis, amet aspernatur assumenda alias similique, in sed hic sunt fugit cumque libero quasi quam quaerat sint voluptatum!</p>
+            {{ a.description|raw }}
         </div>
     </div>
 </div>

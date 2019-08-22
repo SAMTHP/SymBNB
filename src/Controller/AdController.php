@@ -54,6 +54,10 @@ class AdController extends AbstractController
                 // We persist this image
                 $manager->persist($image);
             }
+
+            // Linking with the user which is login
+            $ad->setAuthor($this->getUser());
+
             // We persit the new ad entity
             $manager->persist($ad);
             dump($ad);

@@ -184,4 +184,18 @@ class AccountController extends AbstractController
             'form' => $form->createView()
         ]);
     }
+
+    /**
+     * Allow to show accoun of an user which is connected
+     *
+     * @Route("/account", name="account_index")
+     * 
+     * @return Response
+     */
+    public function myAccount()
+    {
+        return $this->render('user/index.html.twig',[
+            'user' => $this->getUser()
+        ]);
+    }
 }
