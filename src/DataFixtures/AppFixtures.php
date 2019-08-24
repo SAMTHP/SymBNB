@@ -3,6 +3,7 @@
 namespace App\DataFixtures;
 
 use App\Entity\Ad;
+use App\Entity\Booking;
 use Faker\Factory;
 use App\Entity\Image;
 use App\Entity\Role;
@@ -96,6 +97,7 @@ class AppFixtures extends Fixture
 
         // We generate ads
         for($i = 1; $i <= 30; $i++ ){
+
             // Firstly we doing an instanciation of Ad class
             $ad = new Ad();
 
@@ -129,6 +131,40 @@ class AppFixtures extends Fixture
                 // To finish, we using the doctrine manager, in order to persist in to database
                 $manager->persist($image);
 
+            }
+
+            // Booking admins
+            for($g = 1; $g <= mt_rand(0, 10); $g++){
+                // Instanciation af Booking class
+                $booking = new Booking();
+
+                // We define the created date
+                $createdAt = $faker->dateTimeBetween('-6 months');
+                // We define the start date
+                $startDate = $faker->dateTimeBetween('-3 months');
+                // We difine the duration
+                $duration = mt_rand(3, 10);
+                // We calculate the end date
+                $endDate = (clone $startDate)->modify("+$duration days");
+                // We calculate the amount of booking
+                $amount = $duration * $ad->getPrice();
+
+                // We define the booker
+                $booker = $users[mt_rand(0, count($users)-1 )];
+                // We add comments
+                $comment = $faker->paragraph();
+
+                // We set the booking informations
+                $booking->setBooker($booker)
+                        ->setAd($ad)
+                        ->setStartDate($startDate)
+                        ->setEndDate($endDate)
+                        ->setCreatedAt($createdAt)
+                        ->setAmount($amount)
+                        ->setComment($comment);
+
+                // We using the doctrine manager in order to persist this booking in to database
+                $manager->persist($booking);
             }
             
             // To finish, we using the doctrine manager, in order to persist in to database
