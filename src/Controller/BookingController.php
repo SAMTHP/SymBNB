@@ -5,15 +5,19 @@ namespace App\Controller;
 use App\Entity\Ad;
 use App\Entity\Booking;
 use App\Form\BookingType;
-use Doctrine\Common\Persistence\ObjectManager;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\Common\Persistence\ObjectManager;
 use Symfony\Component\Routing\Annotation\Route;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class BookingController extends AbstractController
 {
     /**
      * @Route("/ads/{slug}/book", name="booking_create")
+     * @IsGranted(
+     *  "ROLE_USER"
+     * )
      */
     public function book(Ad $ad, Request $request, ObjectManager $manager)
     {
@@ -24,12 +28,47 @@ class BookingController extends AbstractController
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            $booker = $this->getUser();
 
+            $booking->setAd($ad)
+                    ->setBooker($booker);
+            
+            // If dates are not availables, message d'erreur
+            if(!$booking->isBookableDates()){
+                $this->addFlash(
+                    'warning',
+                    'Les dates que vous avez choisi ne peuvent être réservées : elles sont déjà prises'
+                );
+            } else{ // Else, we persist and flush the datas
+                $manager->persist($booking);
+                $manager->flush();
+
+                return $this->redirectToRoute('booking_show',[
+                    'id' => $booking->getId(),
+                    'withAlert' => true
+                ]);
+            }
+            
         }
 
         return $this->render('booking/book.html.twig', [
             'ad' => $ad,
             'form' => $form->createView()
+        ]);
+    }
+    
+    /**
+     * Allow to show booking
+     * 
+     * @Route("/booking/{id}", name="booking_show")
+     *
+     * @param Booking $booking
+     * @return Response
+     */
+    public function show(Booking $booking)
+    {
+        return $this->render('booking/show.html.twig',[
+            'booking' => $booking
         ]);
     }
 }

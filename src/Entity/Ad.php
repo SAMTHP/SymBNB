@@ -118,6 +118,38 @@ class Ad
         }
     }
 
+
+    /**
+     * Allow to get an array of days wich are not available for this ad
+     *
+     * @return array Object array DateTime which represent occupation days 
+     */
+    public function getNotAvailableDays()
+    {
+        // We initialize an array which will to save the not available days
+        $notAvailableDays = [];
+
+        foreach($this->bookings as $booking){
+            // Calculate the days which are between start date and end date
+            $resultat = range(
+                $booking->getStartDate()->getTimestamp(),
+                $booking->getEndDate()->getTimestamp(),
+                24 * 60 * 60
+            );
+
+            // We convert the timestamp dates in real date with good format
+            $days = array_map(function($dayTimestamp){
+                return new \DateTime(date('Y-m-d', $dayTimestamp));
+            }, $resultat);
+
+            // We merge the notAvailableDays array with days array
+            $notAvailableDays = array_merge($notAvailableDays, $days);
+        }
+
+        // We return the not available days in to an array
+        return $notAvailableDays;
+    }
+
     public function getId(): ?int
     {
         return $this->id;

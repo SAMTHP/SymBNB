@@ -8,7 +8,7 @@
         <h1>{{ ad.title }}</h1>
         <p>{{ ad.introduction }}</p>
         <p class="h2">
-            <strong>{{ ad.rooms }} chambres</strong> pour <strong>{{ ad.price }}&euro;</strong> par nuit
+            <strong>{{ ad.rooms }} chambres</strong> pour <strong>{{ ad.price }} &euro; </strong> par nuit
         </p>
         <a href="{{ path('booking_create', {'slug': ad.slug}) }}" class="btn btn-secondary">Réserver !</a>
         {% if app.user and ad.author == app.user %}

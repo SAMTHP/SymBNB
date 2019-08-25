@@ -3,9 +3,12 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\ORM\Mapping\HasLifecycleCallbacks;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\BookingRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Booking
 {
@@ -30,11 +33,19 @@ class Booking
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\Date(
+     *  message="Attention la date d'arrivée être au bon format !"
+     * )
+     * @Assert\GreaterThan("today", message="La date d'arrivée doit être supérieur à la date d'aujourd'hui !")
      */
     private $startDate;
 
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\Date(
+     *  message="Attention la date de départ être au bon format !"
+     * )
+     * @Assert\GreaterThan(propertyPath="startDate", message="La date de départ doit être supérieur à la date d'arrivée !")
      */
     private $endDate;
 
@@ -52,6 +63,76 @@ class Booking
      * @ORM\Column(type="text", nullable=true)
      */
     private $comment;
+
+    /**
+     * Allow to initialize the slug
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     * 
+     * @return void
+     */
+    public function prePersist(){
+        if(empty($this->createdAt)){
+            $this->createdAt = new \DateTime();
+        }
+
+        if(empty($this->amount)){
+            $this->amount = $this->ad->getPrice() * $this->getDuration();
+        }
+    }
+
+    public function getDuration(){
+        $diff = $this->endDate->diff($this->startDate);
+        return $diff->days;
+    }
+
+    public function isBookableDates()
+    {
+        // 1) It must to know the impossibles dates for booking an ad
+        $notAvailableDays = $this->ad->getNotAvailableDays();
+
+        // 2) It must to compare the chosen dates with impossibles dates
+        $bookingDays = $this->getDays();
+
+        $formatDay = function($day){
+            return $day->format('Y-m-d');
+        };
+
+        // Array which contain days of booking whith string of date format
+        $days = array_map($formatDay, $bookingDays);
+
+        // Array which contain days of booking whith string of date format
+        $notAvailable = array_map($formatDay, $notAvailableDays);
+
+        foreach($days as $day){
+            if(array_search($day, $notAvailable) !== false){
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Allow to get an array which contain the days which corresponding with the booking
+     *
+     * @return array An object array DateTime which represent the booking days
+     */
+    public function getDays()
+    {
+        $resultat = range(
+            $this->startDate->getTimestamp(),
+            $this->endDate->getTimestamp(),
+            24 * 60 * 60
+        );
+
+        $days = array_map(function($timeStampDay){
+            return new \DateTime(date('Y-m-d',$timeStampDay));
+        }, $resultat);
+
+        return $days;
+    }
 
     public function getId(): ?int
     {

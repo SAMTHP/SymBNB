@@ -27,3 +27,8 @@ div.ad-titre h1, div.ad-titre p, div.carousel-caption h5, div.carousel-caption p
     max-width: 24px;
     max-height: 24px;
 }
+
+.datepicker table tr td.disabled, .datepicker table tr td.disabled:hover {
+    color: white !important;
+    background-color: rgb(214, 130, 99) !important;
+}
