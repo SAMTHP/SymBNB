@@ -124,6 +124,16 @@ class Ad
         }
     }
 
+    public function getAvgRatings(){
+        // We must to know the sum of ratings
+        $sum = array_reduce($this->comments->toArray(), function($total, $comment){
+            return $total + $comment->getRating();
+        }, 0);
+
+        if(count($this->comments) > 0) return $sum / count($this->comments);
+
+        return 0;
+    }
 
     /**
      * Allow to get an array of days wich are not available for this ad
