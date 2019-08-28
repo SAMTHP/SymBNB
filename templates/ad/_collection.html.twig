@@ -4,7 +4,7 @@
     {{ form_widget(form) }}
 
     <div class="form-group">
-        <button type="button" id="add-image" class="btn btn-primary">Ajouter une image</button>
+        <button type="button" id="add-image" class="btn btn-primary">Ajouter une image &nbsp; <i class="fas fa-plus"></i></button>
     </div>
 {% endblock %}
 
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col-2">
-                <button type="button" class="btn btn-danger" data-action="delete" data-target="#block_{{id}}">X</button>
+                <button type="button" class="btn btn-danger" data-action="delete" data-target="#block_{{id}}"><i class="fas fa-trash"></i></button>
             </div>
         </div>
     </div>

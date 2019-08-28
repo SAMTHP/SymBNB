@@ -4,13 +4,42 @@
 
 {% block body %}
     <div class="container">
-        <h1>Modification du profil</h1>
+        <h1 class="my-5">Modification du profil</h1>
 
         {{ form_start(form) }}
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-light">
+                    <h2 class="alert-heading">Informations générales</h2>
+                    <hr>
+                    {{ form_row(form.fistName) }}
+                    {{ form_row(form.lastName) }}
+                    {{ form_row(form.email) }}
+                    {{ form_row(form.picture) }}
+                </div>
+            </div>
+            <div class="col">
+                <div class="alert alert-light">
+                    <h2 class="alert-heading">Descriptions du profil</h2>
+                    <hr>
+                    {{ form_row(form.introduction) }}
+                    {{ form_row(form.description) }}
+                </div>
+            </div>
+        </div>
 
-        {{ form_widget(form) }}
-
-        <button type="submit" class="btn btn-primary">Enregistrer les modifications</button>
+        <div class="alert alert-success text-center">
+            <div class="row">
+                <div class="col ">
+                    <h2 class="alert-heading">Sauvegarder les changements</h2>
+                    <p>Vous êtes sur le point de modifier votre profil !</p>
+                </div>
+                <div class="col">
+                    <br>
+                    <button type="submit" class="btn btn-primary">Enregistrer les modifications  <i class="fas fa-save"></i></button>
+                </div>
+            </div>
+        </div>
         {{ form_end(form) }}
     </div>
 {% endblock %}

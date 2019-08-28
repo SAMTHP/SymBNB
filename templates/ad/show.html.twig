@@ -8,9 +8,9 @@
         <h1>{{ ad.title }}</h1>
         <p>{{ ad.introduction }}</p>
         <p class="h2">
-            <strong>{{ ad.rooms }} chambres</strong> pour <strong>{{ ad.price }} &euro; </strong> par nuit
+            <strong>{{ ad.rooms }} chambres</strong> pour <strong>{{ ad.price | number_format(2, ',', ' ') }} &euro; </strong> par nuit
         </p>
-        <a href="{{ path('booking_create', {'slug': ad.slug}) }}" class="btn btn-secondary">Réserver !</a>
+        <a href="{{ path('booking_create', {'slug': ad.slug}) }}" class="btn btn-primary">Réserver !</a>
         {% if app.user and ad.author == app.user %}
             <a href="{{ path("ads_edit",{'slug': ad.slug}) }}" class="btn btn-primary">Editer</a>
             <a href="{{path('ads_delete',{'slug': ad.slug }) }}" onclick="return confirm(`Etes vous sûr de vouloir supprimer l'annonce {{ ad.title }} ?`)" class="btn btn-danger">Supprimer l'annonce</a>
@@ -74,11 +74,11 @@
 
                 {% for comment in ad.comments %}
                     <div class="bg-light rounded mb-3 py-3 px-3 shadow">
-                        <strong>{{comment.author.fullName}}</strong> a dit : 
+                        <strong>{{comment.author.fistName}}</strong> a dit : 
                         <blockquote>
                             {{comment.content}}
                         </blockquote>
-                        <strong>Note donnée par {{comment.author.fullName}} : </strong>
+                        <strong>Note donnée : </strong>
                         {% set rating = comment.rating %}
                         {% include "partials/rating.html.twig" with {'rating': comment.rating }%}
                     </div>

@@ -4,11 +4,48 @@
 
 {% block body %}
 <div class="container">
-    <h1>Inscrivez-vous sur notre site</h1>
+    <h1 class="my-5">Inscrivez-vous sur notre site</h1>
     {{ form_start(form) }}
+    <div class="row">
+        <div class="col">
+            <div class="alert alert-light">
+                <h2 class="alert-heading">Informations générales</h2>
+                <hr>
+                {{ form_row(form.fistName) }}
+                {{ form_row(form.lastName) }}
+                {{ form_row(form.email) }}
+                {{ form_row(form.picture) }}
+                <br><br><br><br><br><br>
+            </div>
+        </div>
+        <div class="col">
+            <div class="alert alert-light">
+                <h2 class="alert-heading">Mot de passe</h2>
+                <hr>
+                {{ form_row(form.hash) }}
+                {{ form_row(form.passwordConfirm) }}
+            </div>
+            <div class="alert alert-light">
+                <h2 class="alert-heading">Descriptions du profil</h2>
+                <hr>
+                {{ form_row(form.introduction) }}
+                {{ form_row(form.description) }}
+            </div>
+        </div>
+    </div>
 
-    {{ form_widget(form) }}
-    <button type="submit" class="btn btn-success">Confirmez l'inscription</button>
+    <div class="alert alert-success text-center">
+        <div class="row">
+            <div class="col ">
+                <h2 class="alert-heading">Création d'un compte</h2>
+                <p>Vous êtes sur le point de créer votre compte !</p>
+            </div>
+            <div class="col">
+                <br>
+                <button type="submit" class="btn btn-primary">Confirmer l'inscription  <i class="fas fa-save"></i></button>
+            </div>
+        </div>
+    </div>
     {{ form_end(form) }}
 </div>
     
