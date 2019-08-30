@@ -36,7 +36,11 @@ class Booking
      * @Assert\Date(
      *  message="Attention la date d'arrivée être au bon format !"
      * )
-     * @Assert\GreaterThan("today", message="La date d'arrivée doit être supérieur à la date d'aujourd'hui !")
+     * @Assert\GreaterThan(
+     *      "today",
+     *      message="La date d'arrivée doit être supérieur à la date d'aujourd'hui !",
+     *      groups={"front"}
+     * )
      */
     private $startDate;
 
@@ -65,7 +69,7 @@ class Booking
     private $comment;
 
     /**
-     * Allow to initialize the slug
+     * Allow to calculate the amount of booking
      *
      * @ORM\PrePersist
      * @ORM\PreUpdate
