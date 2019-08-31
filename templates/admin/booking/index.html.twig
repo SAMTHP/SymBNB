@@ -35,5 +35,20 @@
             {% endfor %}
         </tbody>
     </table>
+    <div class="d-flex justify-content-center">
+        <ul class="pagination">
+            <li class="page-item {% if page - 1 <= 0 %}disabled{% endif %}">
+                <a class="page-link" href="{% if page - 1 > 0 %}{{path('admin_bookings_index', {'page': page - 1 })}}{% else %}#{% endif %}">&laquo;</a>
+            </li>
+            {% for i in 1..total_pages %}
+                <li class="page-item {% if page == i %}active{% endif %}">
+                    <a class="page-link" href="{{path('admin_bookings_index', {'page': i})}}">{{ i }}</a>
+                </li>
+            {% endfor %}
+            <li class="page-item {% if page + 1 > total_pages %}disabled{% endif %}">
+                <a class="page-link" href="{% if page + 1 <= total_pages %}{{path('admin_bookings_index', {'page': page + 1 })}}{% else %}#{% endif %}">&raquo;</a>
+            </li>
+        </ul>
+    </div>
 </div>
 {% endblock %}
