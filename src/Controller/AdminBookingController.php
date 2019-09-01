@@ -27,9 +27,7 @@ class AdminBookingController extends AbstractController
                    ->setCurrentPage($page);
 
         return $this->render('admin/booking/index.html.twig', [
-            'bookings' => $pagination->getData(),
-            'total_pages' => $pagination->getPages(),
-            'page' => $page
+            'pagination' => $pagination
         ]);
     }
 

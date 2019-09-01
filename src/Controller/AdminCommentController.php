@@ -22,9 +22,7 @@ class AdminCommentController extends AbstractController
                    ->setCurrentPage($page);
 
         return $this->render('admin/comment/index.html.twig', [
-            'comments' => $pagination->getData(),
-            'total_pages' => $pagination->getPages(),
-            'page' => $page
+            'pagination' => $pagination
         ]);
     }
 

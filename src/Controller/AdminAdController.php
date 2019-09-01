@@ -23,9 +23,7 @@ class AdminAdController extends AbstractController
                    ->setCurrentPage($page);
 
         return $this->render('admin/ad/index.html.twig', [
-            'ads' => $pagination->getData(),
-            'total_pages' => $pagination->getPages(),
-            'page' => $page
+            'pagination' => $pagination
         ]);
     }
 
